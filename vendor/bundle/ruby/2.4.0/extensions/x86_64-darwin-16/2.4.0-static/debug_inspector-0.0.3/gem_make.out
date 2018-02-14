@@ -1,0 +1,15 @@
+current directory: /Users/sho/project/todolist/vendor/bundle/ruby/2.4.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+/Users/sho/.rbenv/versions/2.4.0/bin/ruby -r ./siteconf20180215-52671-ukbh1v.rb extconf.rb
+creating Makefile
+
+current directory: /Users/sho/project/todolist/vendor/bundle/ruby/2.4.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /Users/sho/project/todolist/vendor/bundle/ruby/2.4.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.bundle
+
+current directory: /Users/sho/project/todolist/vendor/bundle/ruby/2.4.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 debug_inspector.bundle ./.gem.20180215-52671-1oq98v5

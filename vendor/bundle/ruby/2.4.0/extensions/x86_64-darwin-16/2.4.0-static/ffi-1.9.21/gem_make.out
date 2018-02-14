@@ -1,0 +1,51 @@
+current directory: /Users/sho/project/todolist/vendor/bundle/ruby/2.4.0/gems/ffi-1.9.21/ext/ffi_c
+/Users/sho/.rbenv/versions/2.4.0/bin/ruby -r ./siteconf20180215-54344-gy0uxd.rb extconf.rb
+checking for ffi.h... no
+checking for ffi.h in /usr/local/include,/usr/include/ffi... no
+checking for shlwapi.h... no
+checking for rb_thread_blocking_region()... no
+checking for rb_thread_call_with_gvl()... yes
+checking for rb_thread_call_without_gvl()... yes
+creating extconf.h
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /Users/sho/project/todolist/vendor/bundle/ruby/2.4.0/extensions/x86_64-darwin-16/2.4.0-static/ffi-1.9.21/mkmf.log
+
+current directory: /Users/sho/project/todolist/vendor/bundle/ruby/2.4.0/gems/ffi-1.9.21/ext/ffi_c
+make "DESTDIR=" clean
+
+current directory: /Users/sho/project/todolist/vendor/bundle/ruby/2.4.0/gems/ffi-1.9.21/ext/ffi_c
+make "DESTDIR="
+Running autoreconf for libffi
+autoreconf: Entering directory `.'
+autoreconf: configure.ac: not using Gettext
+autoreconf: running: aclocal --force -I m4
+configure.ac:376: warning: AC_PROG_LD is m4_require'd but not m4_defun'd
+acinclude.m4:333: LIBFFI_CHECK_LINKER_FEATURES is expanded from...
+acinclude.m4:473: LIBFFI_ENABLE_SYMVERS is expanded from...
+configure.ac:376: the top level
+configure.ac:376: warning: AC_PROG_LD is m4_require'd but not m4_defun'd
+acinclude.m4:333: LIBFFI_CHECK_LINKER_FEATURES is expanded from...
+acinclude.m4:473: LIBFFI_ENABLE_SYMVERS is expanded from...
+configure.ac:376: the top level
+autoreconf: configure.ac: tracing
+configure.ac:376: warning: AC_PROG_LD is m4_require'd but not m4_defun'd
+acinclude.m4:333: LIBFFI_CHECK_LINKER_FEATURES is expanded from...
+acinclude.m4:473: LIBFFI_ENABLE_SYMVERS is expanded from...
+configure.ac:376: the top level
+autoreconf: configure.ac: not using Libtool
+autoreconf: running: /usr/local/Cellar/autoconf/2.69/bin/autoconf --force
+configure.ac:376: warning: AC_PROG_LD is m4_require'd but not m4_defun'd
+acinclude.m4:333: LIBFFI_CHECK_LINKER_FEATURES is expanded from...
+acinclude.m4:473: LIBFFI_ENABLE_SYMVERS is expanded from...
+configure.ac:376: the top level
+configure.ac:41: error: possibly undefined macro: AC_PROG_LIBTOOL
+      If this token and others are legitimate, please use m4_pattern_allow.
+      See the Autoconf documentation.
+configure:7612: error: possibly undefined macro: AC_PROG_LD
+autoreconf: /usr/local/Cellar/autoconf/2.69/bin/autoconf failed with exit status: 1
+make: *** ["/Users/sho/project/todolist/vendor/bundle/ruby/2.4.0/gems/ffi-1.9.21/ext/ffi_c/libffi-x86_64-darwin16"/.libs/libffi_convenience.a] Error 1
+
+make failed, exit code 2
