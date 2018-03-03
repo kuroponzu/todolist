@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<%provide(:title,"標語一覧")%>
+
+<table class="table table-hover">
+  <caption>標語一覧</caption>
+  <thead>
+    <tr>
+      <th>登録No</th>
+      <th>登録日</th>
+      <th>標語</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @all_slogans.each do |slogan|%>
+  <tr>
+    <th><%=slogan.id%></th>
+<%#=convert_to_japantime(score.updated_at)%>
+    <th><%=slogan.created_at%></th>
+    <th><%=slogan.content%></th>
+    <th><%=link_to "削除",slogan_path(id: slogan.id),method: :delete,
+            data:{confirm:"本当に削除しますか？"},class: "btn btn-xs btn-primary"%></th>
+  </tr>
+  <%end%>
+  </tbody>
+</table>

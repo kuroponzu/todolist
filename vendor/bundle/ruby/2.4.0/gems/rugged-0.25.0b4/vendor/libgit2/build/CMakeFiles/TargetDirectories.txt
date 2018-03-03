@@ -1,0 +1,7 @@
+/Users/sho/project/todolist/vendor/bundle/ruby/2.4.0/gems/rugged-0.25.0b4/vendor/libgit2/build/CMakeFiles/install/local.dir
+/Users/sho/project/todolist/vendor/bundle/ruby/2.4.0/gems/rugged-0.25.0b4/vendor/libgit2/build/CMakeFiles/rebuild_cache.dir
+/Users/sho/project/todolist/vendor/bundle/ruby/2.4.0/gems/rugged-0.25.0b4/vendor/libgit2/build/CMakeFiles/edit_cache.dir
+/Users/sho/project/todolist/vendor/bundle/ruby/2.4.0/gems/rugged-0.25.0b4/vendor/libgit2/build/CMakeFiles/install/strip.dir
+/Users/sho/project/todolist/vendor/bundle/ruby/2.4.0/gems/rugged-0.25.0b4/vendor/libgit2/build/CMakeFiles/install.dir
+/Users/sho/project/todolist/vendor/bundle/ruby/2.4.0/gems/rugged-0.25.0b4/vendor/libgit2/build/CMakeFiles/list_install_components.dir
+/Users/sho/project/todolist/vendor/bundle/ruby/2.4.0/gems/rugged-0.25.0b4/vendor/libgit2/build/CMakeFiles/git2.dir

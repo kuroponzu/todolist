@@ -1,0 +1,53 @@
+current directory: /Users/sho/project/todolist/vendor/bundle/ruby/2.4.0/gems/charlock_holmes-0.7.5/ext/charlock_holmes
+/Users/sho/.rbenv/versions/2.4.0/bin/ruby -r ./siteconf20180302-1712-15855o3.rb extconf.rb
+checking for -licui18n... no
+checking for -licui18n... yes
+checking for unicode/ucnv.h... yes
+checking for -lz... yes
+checking for -licuuc... yes
+checking for -licudata... yes
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /Users/sho/project/todolist/vendor/bundle/ruby/2.4.0/extensions/x86_64-darwin-16/2.4.0-static/charlock_holmes-0.7.5/mkmf.log
+
+current directory: /Users/sho/project/todolist/vendor/bundle/ruby/2.4.0/gems/charlock_holmes-0.7.5/ext/charlock_holmes
+make "DESTDIR=" clean
+
+current directory: /Users/sho/project/todolist/vendor/bundle/ruby/2.4.0/gems/charlock_holmes-0.7.5/ext/charlock_holmes
+make "DESTDIR="
+compiling converter.c
+compiling encoding_detector.c
+compiling ext.c
+compiling transliterator.cpp
+In file included from transliterator.cpp:5:
+In file included from /usr/local/Cellar/icu4c/59.1_1/include/unicode/translit.h:25:
+In file included from /usr/local/Cellar/icu4c/59.1_1/include/unicode/unistr.h:33:
+/usr/local/Cellar/icu4c/59.1_1/include/unicode/char16ptr.h:90:19: warning: deleted function definitions are a C++11 extension [-Wc++11-extensions]
+    Char16Ptr() = delete;
+                  ^
+/usr/local/Cellar/icu4c/59.1_1/include/unicode/char16ptr.h:198:24: warning: deleted function definitions are a C++11 extension [-Wc++11-extensions]
+    ConstChar16Ptr() = delete;
+                       ^
+In file included from transliterator.cpp:5:
+In file included from /usr/local/Cellar/icu4c/59.1_1/include/unicode/translit.h:25:
+/usr/local/Cellar/icu4c/59.1_1/include/unicode/unistr.h:3025:7: error: delegating constructors are permitted only in C++11
+      UnicodeString(ConstChar16Ptr(text)) {}
+      ^~~~~~~~~~~~~
+/usr/local/Cellar/icu4c/59.1_1/include/unicode/unistr.h:3087:7: error: delegating constructors are permitted only in C++11
+      UnicodeString(ConstChar16Ptr(text), length) {}
+      ^~~~~~~~~~~~~
+/usr/local/Cellar/icu4c/59.1_1/include/unicode/unistr.h:3180:7: error: delegating constructors are permitted only in C++11
+      UnicodeString(Char16Ptr(buffer), buffLength, buffCapacity) {}
+      ^~~~~~~~~~~~~
+transliterator.cpp:101:60: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+  trans = Transliterator::createInstance(UnicodeString(id, id_len), UTRANS_FORWARD, p_error, status);
+                                         ~~~~~~~~~~~~~     ^~~~~~
+transliterator.cpp:106:34: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+  u_txt = new UnicodeString(txt, txt_len);
+              ~~~~~~~~~~~~~      ^~~~~~~
+4 warnings and 3 errors generated.
+make: *** [transliterator.o] Error 1
+
+make failed, exit code 2

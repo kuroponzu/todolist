@@ -1,0 +1,17 @@
+<%= form_for(slogan) do |f| %>
+  <% if slogan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(slogan.errors.count, "error") %> prohibited this slogan from being saved:</h2>
+
+      <ul>
+      <% slogan.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

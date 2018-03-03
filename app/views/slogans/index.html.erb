@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Slogans</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @slogans.each do |slogan| %>
+      <tr>
+        <td><%= link_to 'Show', slogan %></td>
+        <td><%= link_to 'Edit', edit_slogan_path(slogan) %></td>
+        <td><%= link_to 'Destroy', slogan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Slogan', new_slogan_path %>

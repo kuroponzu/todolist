@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+<h1>作業一覧</h1>
+
+
+<table class="table table-hover">
+  <caption>作業一覧</caption>
+  <thead>
+    <tr>
+      <th>作業ID</th>
+      <th>作業内容</th>
+      <th>作業日</th>
+      <th>作業者</th>
+      <th>作業承認者</th>
+      <th>備考</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @work_list.each do |list| %>
+  <tr>
+    <th><%=list.id%></th>
+    <th><%=list.work%></th>
+    <th><%=list.work_date%></th>
+    <th><%=list.worker%></th>
+    <th><%=list.authorizer%></th>
+    <th><%=list.comment%></th>
+  </tr>
+<%end%>
+  </tbody>
+</table>
+<%#= link_to 'Edit', edit_work_list_path(@work_list) %>
+<%#= link_to 'Back', work_lists_path %>

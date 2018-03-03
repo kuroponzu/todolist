@@ -1,0 +1,17 @@
+<%= form_for(work_list) do |f| %>
+  <% if work_list.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(work_list.errors.count, "error") %> prohibited this work_list from being saved:</h2>
+
+      <ul>
+      <% work_list.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
