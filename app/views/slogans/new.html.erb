@@ -4,8 +4,20 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@slogan) do |f| %>
+    <%= form_for(@slogan) do |s| %>
     <%= render 'shared/error_messages'%>
+
+    <%= s.label :title,"タイトル" %>
+    <%= s.text_field :title %>
+
+    <%= s.label :category,"カテゴリー" %><br>
+    <label class="radio-inline"><%= s.radio_button :category,"朝"%>朝</label>
+    <label class="radio-inline"><%= s.radio_button :category,"夕"%>夕</label>
+    <label class="radio-inline"><%= s.radio_button :category,"朝夕"%>朝＆夕</label>
+
+    <br><br>
+
+    <%= s.label :content,"標語" %>
     <div class="form-group">
       <div id='editor'>
         <textarea name="slogan[content]" id="n" class="form-control" rows="20" v-model='input' debounce='50'></textarea>
@@ -14,7 +26,7 @@
         </div>
       </div>
     </div>
-    <%= f.submit %>
+    <%= s.submit %>
     <% end %>
   </div>
 </div>

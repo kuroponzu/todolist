@@ -1,6 +1,38 @@
-<h1>Editing Work List</h1>
+<%provide(:title,"ToDo編集")%>
+<h1>ToDo編集</h1>
 
-<%= render 'form', work_list: @work_list %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@work_list) do |f| %>
+      <%= render 'shared/error_messages'%>
+        <%= f.label :work,"作業内容" %>
+        <%= f.text_field :work %>
 
-<%= link_to 'Show', @work_list %> |
-<%= link_to 'Back', work_lists_path %>
+        <%= f.label :work_date,"作業日"%>
+        <div class='input-group date datepicker'>
+          <%= f.text_field :work_date, data: { :date_format => 'YYYY/MM/DD' },
+          :class => 'form-control datetimepicker', placeholder: 'YYYY/MM/DD'  %>
+          <span class="input-group-addon">
+        </div>
+
+        <%= f.label :work_date_completed,"完了日"%>
+        <div class='input-group date datepicker'>
+          <%= f.text_field :work_date_completed, data: { :date_format => 'YYYY/MM/DD' },
+          :class => 'form-control datetimepicker', placeholder: 'YYYY/MM/DD'  %>
+          <span class="input-group-addon">
+        </div>
+
+
+        <%= f.label :worker,"作業者" %>
+        <%= f.text_field :worker %>
+        <%= f.label :authorizer,"承認者(課長職以上を指定すること)" %>
+        <%= f.text_field :authorizer %>
+        <%= f.label :file,"資料(10MBまでのファイルしかアップロード出来ません。)" %>
+        <%= f.file_field :file %>
+        <%= f.label :comment,"備考欄" %>
+        <%= f.text_field :comment %>
+
+        <%= f.submit "更新", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>

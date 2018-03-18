@@ -25,6 +25,7 @@ class SlogansController < ApplicationController
 
   # GET /slogans/1/edit
   def edit
+    @slogan = Slogan.find(params[:id])
   end
 
   # POST /slogans
@@ -51,15 +52,14 @@ class SlogansController < ApplicationController
   # PATCH/PUT /slogans/1
   # PATCH/PUT /slogans/1.json
   def update
-    respond_to do |format|
-      if @slogan.update(slogan_params)
-        format.html { redirect_to @slogan, notice: 'Slogan was successfully updated.' }
-        format.json { render :show, status: :ok, location: @slogan }
-      else
-        format.html { render :edit }
-        format.json { render json: @slogan.errors, status: :unprocessable_entity }
-      end
+    @slogan = set_slogan
+    if @slogan.update(slogan_params)
+      flash[:success] = "更新が完了しました。"
+    else
+      flash[:danger] = "更新が失敗しました。"
     end
+  redirect_to all_slogans_path
+
   end
 
   # DELETE /slogans/1
@@ -70,12 +70,6 @@ class SlogansController < ApplicationController
          flash[:success] = "削除しました。"
         end
         redirect_to all_slogans_path
-
-    #@slogan.destroy
-    #respond_to do |format|
-    #  format.html { redirect_to slogans_url, notice: 'Slogan was successfully destroyed.' }
-    #  format.json { head :no_content }
-    #end
   end
 
   private
@@ -86,6 +80,6 @@ class SlogansController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def slogan_params
-      params.require(:slogan).permit(:content)
+      params.require(:slogan).permit(:title,:category,:content)
     end
 end

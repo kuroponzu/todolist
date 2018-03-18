@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180301142612) do
+ActiveRecord::Schema.define(version: 20180311033116) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20180301142612) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text     "content"
+    t.string   "title"
+    t.string   "category"
   end
 
   create_table "work_lists", force: :cascade do |t|
@@ -27,6 +29,8 @@ ActiveRecord::Schema.define(version: 20180301142612) do
     t.string   "worker"
     t.string   "authorizer"
     t.text     "comment"
+    t.datetime "work_date_completed"
+    t.string   "file_name"
   end
 
 end

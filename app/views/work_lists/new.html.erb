@@ -17,11 +17,21 @@
         <span class="input-group-addon">
       </div>
 
+      <%= f.label :work_date_completed,"完了日"%>
+      <div class='input-group date datepicker'>
+        <%= f.text_field :work_date_completed, data: { :date_format => 'YYYY/MM/DD' },
+        :class => 'form-control datetimepicker', placeholder: 'YYYY/MM/DD'  %>
+        <span class="input-group-addon">
+      </div>
+
       <%= f.label :worker,"作業者" %>
       <%= f.text_field :worker %>
 
       <%= f.label :authorizer,"承認者(課長職以上を指定すること)" %>
       <%= f.text_field :authorizer %>
+
+      <%= f.label :file,"資料(10MBまでのファイルしかアップロード出来ません。)" %>
+      <%= f.file_field :file %>
 
       <%= f.label :comment,"備考欄" %>
       <%= f.text_field :comment %>
@@ -30,12 +40,6 @@
     <% end %>
   </div>
 </div>
-
-<script>
- $(function() {
-  $('#book_content').froalaEditor();
- });
-</script>
 
 
 <%#= link_to 'Back', work_lists_path %>

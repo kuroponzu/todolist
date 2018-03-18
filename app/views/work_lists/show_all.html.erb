@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<%provide(:title,"ToDo一覧")%>
+
+<table class="table table-hover">
+  <caption>ToDo一覧</caption>
+  <thead>
+    <tr>
+      <th>登録No</th>
+      <th>作業内容</th>
+      <th>作業日</th>
+      <th>作業完了日</th>
+      <th>作業者</th>
+      <th>承認者</th>
+      <th>備考</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @all_work_list.each do |work|%>
+  <tr>
+    <th><%=work.id%></th>
+<%#=convert_to_japantime(score.updated_at)%>
+    <th><%=work.work%></th>
+    <th><%=show_days(work.work_date)%></th>
+    <th><%=show_days(work.work_date_completed)%></th>
+    <th><%=work.worker%></th>
+    <th><%=work.authorizer%></th>
+    <th><%=work.comment%></th>
+    <th><%=link_to "編集",edit_work_list_path(id: work.id),
+            class: "btn btn-xs btn-primary"%></th>
+    <th><%=link_to "削除",work_list_path(id: work.id),method: :delete,
+            data:{confirm:"本当に削除しますか？"},class: "btn btn-xs btn-primary"%></th>
+  </tr>
+  <%end%>
+  </tbody>
+</table>
