@@ -10,8 +10,13 @@ class SlogansController < ApplicationController
   # GET /slogans/1
   # GET /slogans/1.json
   def random_show
-    @slogan = Slogan.order("RANDOM()").first
-
+    @category = params[:category]
+    if @category == "morning"
+      @slogans = Slogan.where("(category = ?) OR (category = ?)", '朝', '朝夕')
+    elsif params[:category] == "evening"
+      @slogans = Slogan.where("(category = ?) OR (category = ?)", '夕', '朝夕')
+    end
+    @slogan = @slogans[rand(@slogans.size)]
   end
 
   def show_all
@@ -32,6 +37,7 @@ class SlogansController < ApplicationController
   # POST /slogans.json
   def create
     @slogan = Slogan.new(slogan_params)
+    binding.pry
     if @slogan.save
       flash[:success] = "登録が完了しました。"
       redirect_to root_path

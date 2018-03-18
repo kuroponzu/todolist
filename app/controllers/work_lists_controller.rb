@@ -12,7 +12,7 @@ class WorkListsController < ApplicationController
   # GET /work_lists/1
   # GET /work_lists/1.json
   def show
-    @work_list = WorkList.all
+    @work_list = WorkList.where(work_date_completed: nil)
   end
 
   def show_all
@@ -51,14 +51,12 @@ class WorkListsController < ApplicationController
   # PATCH/PUT /work_lists/1.json
   def update
     @work_list = WorkList.find(params[:id])
-    respond_to do |format|
       if @work_list.update(work_list_completed_params)
         flash[:success] = "更新が完了しました。"
       else
         flash[:danger] = "更新が失敗しました。"
       end
     redirect_to all_work_list_path
-    end
   end
 
   # DELETE /work_lists/1

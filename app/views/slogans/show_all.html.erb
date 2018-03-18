@@ -15,7 +15,7 @@
   <% @all_slogans.each do |slogan|%>
   <tr>
     <th><%=slogan.id%></th>
-    <th><%=slogan.created_at%></th>
+    <th><%=show_days(slogan.created_at)%></th>
     <th><%=slogan.content%></th>
     <th><%=link_to "編集",edit_slogan_path(id: slogan.id),
             class: "btn btn-xs btn-primary"%></th>

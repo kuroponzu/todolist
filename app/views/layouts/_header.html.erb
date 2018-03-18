@@ -9,8 +9,8 @@
            </a>
            <ul class="dropdown-menu">
              <li><%= link_to "TodoList", root_path %></li>
-             <li><%= link_to "朝の挨拶", random_slogans_path(category: @mornig) %></li>
-             <li><%= link_to "帰りの挨拶", random_slogans_path(category: @evening) %></li>
+             <li><%= link_to "朝の挨拶", random_slogans_path(category: "morning") %></li>
+             <li><%= link_to "帰りの挨拶", random_slogans_path(category: "evening") %></li>
            </ul>
         </li>
 

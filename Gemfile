@@ -17,7 +17,8 @@ gem 'coffee-rails', '~> 4.1.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+#JavaScriptが正常に動作しないため、一旦、turbolinksを停止
+#gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -36,6 +37,8 @@ gem 'qiita-markdown'
 gem 'github-linguist'
 gem 'charlock_holmes','0.7.3'
 gem 'rugged','0.25.0b4'
+#ページ遷移時、JavaScriptが動作しないので、追加
+gem 'jquery-turbolinks'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

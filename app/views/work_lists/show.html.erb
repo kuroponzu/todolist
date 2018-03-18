@@ -2,7 +2,7 @@
 <h1>作業一覧</h1>
 
 
-<table class="table table-hover">
+<table id ="work_list" class="table table-hover">
   <caption>作業一覧</caption>
   <thead>
     <tr>
@@ -17,15 +17,19 @@
   <tbody>
   <% @work_list.each do |list| %>
   <tr>
-    <th><%=list.id%></th>
-    <th><%=list.work%></th>
-    <th><%=show_days(list.work_date)%></th>
-    <th><%=list.worker%></th>
-    <th><%=list.authorizer%></th>
-    <th><%=list.comment%></th>
+    <td><%=list.id%></td>
+    <td><%=list.work%></td>
+    <td><%=show_days(list.work_date)%></td>
+    <td><%=list.worker%></td>
+    <td><%=list.authorizer%></td>
+    <td><%=list.comment%></td>
   </tr>
 <%end%>
   </tbody>
 </table>
-<%#= link_to 'Edit', edit_work_list_path(@work_list) %>
-<%#= link_to 'Back', work_lists_path %>
+</div>
+
+
+<script>
+ overdue();
+</script>

@@ -4,4 +4,5 @@
 
 <%= qiita_markdown(@slogan.content) %>
 
-<%= link_to '次', random_slogans_path(@slogan) %>
+<%category  = @category%>
+<%= link_to '次', random_slogans_path(category: category) %>
